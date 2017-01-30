@@ -44,46 +44,32 @@ title: Le Wagon Middleman boilerplate
         </div>
     </div>
     <!-- Your cards code -->
+
     <div class="wrapper-grey padded">
-        <div class="container">
-            <h2 class="text-center">Your next trip</h2>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
-                        <div class="card-category">Paris</div>
-                        <div class="card-description">
-                            <h2>Seb's home</h2>
-                            <p>Charming room with patio</p>
-                        </div>
-                        <img class="card-user avatar avatar-large" src="images/seb.jpg">
-                        <a class="card-link" href="#"></a>
-                    </div>
+      <div class="container">
+        <h2 class="text-center">Your next trip</h2>
+        <div class="row">
+          <% data.members.each do |name, member| %>
+            <% link_to  "/flats/#{name}.html" do %>
+            <div class="col-xs-12 col-sm-4">
+              <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path member["city_picture"] %>);">
+                <div class="card-category">
+                  <%= member["city"] %>
                 </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
-                        <div class="card-category">Brussels</div>
-                        <div class="card-description">
-                            <h2>Anne's home</h2>
-                            <p>Lovely house</p>
-                        </div>
-                        <img class="card-user avatar avatar-large" src="images/anne.jpg">
-                        <a class="card-link" href="#"></a>
-                    </div>
+                <div class="card-description">
+                  <h2><%= member["name"] %></h2>
+                  <p><%= member["description"] %></p>
                 </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-                        <div class="card-category">London</div>
-                        <div class="card-description">
-                            <h2>Romain's home</h2>
-                            <p>Nice flat in Piccadilly</p>
-                        </div>
-                        <img class="card-user avatar avatar-large" src="images/romain.jpeg">
-                        <a class="card-link" href="#"></a>
-                    </div>
-                </div>
+                <%= image_tag member["avatar"], class: "card-user avatar avatar-large" %>
+                <!-- <a class="card-link" href="/flats/#{name}.html" ></a> -->
+              </div>
             </div>
+          <% end %>
+          <% end %>
         </div>
+      </div>
     </div>
+
     <!-- Your newsletter code -->
     <div class="text-center padded" id="newsletter">
         <h2>Get news from us</h2>

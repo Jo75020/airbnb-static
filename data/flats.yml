@@ -1,0 +1,27 @@
+seb:
+  owner_name: Sebastien Saunier
+  picture: background-paris.jpg
+  owner_picture: seb.jpg
+  name: Seb's home
+  summary: Charming room in Montmartre
+  city: Paris, France
+  wifi: true
+  flat_description: This one bedroom studio lodges 4 people (there's 2 double bed) it is located in the city center, in a calm traditional residential area near city´s main Avenue - 3 minutes walk from Sacré Coeur.
+romain:
+  owner_name: Romain Paillard
+  picture: background-london.jpg
+  owner_picture: romain.jpeg
+  name: Romain's home
+  summary: Nice flat in Piccadilly
+  city: London, UK
+  wifi: false
+  flat_description: This one bedroom studio lodges 2 people (there's 1 double bed) it is located in the city center, in a calm traditional residential area near city´s main Avenue - 5 minutes walk from Picadily.
+anne:
+  owner_name: Anne Paillard
+  picture: background-brussels.jpg
+  owner_picture: anne.jpg
+  name: Anne's home
+  summary: Charming place in Brussels
+  city: London, UK
+  wifi: true
+  flat_description: This one full studio lodges 12 people (there's 3 double bed) it is located in the city center, in a calm traditional residential area near city´s main Avenue - 5 minutes walk from the Big Ben.
